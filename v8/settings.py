@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # CUSTOM
     'calc',
+    'rest_framework',
     'v8'
 ]
 
