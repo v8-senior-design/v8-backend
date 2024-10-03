@@ -10,7 +10,7 @@ Before you start, make sure you have the following installed:
 
 ## Setup
 1. Clone the repository
-`git@github.com:v8-senior-design/v8-backend.git
+`git clone git@github.com:v8-senior-design/v8-backend.git
 `
 2. Create a virtual environment
 `python -m venv env
