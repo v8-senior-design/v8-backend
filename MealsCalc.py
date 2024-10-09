@@ -1,3 +1,5 @@
+# Created by Chase Reeves - This comment is being used to create a commit on the file history.
+
 # Average carbon footprint in kg CO₂e per kg of food product
 # Carbon footprint values are based on data from Poore, J., & Nemecek, T. (2018).
 # Reducing food’s environmental impacts through producers and consumers. Science, 360(6392), 987-992.
