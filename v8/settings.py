@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     # CUSTOM
     'calc',
     'rest_framework',
-    'v8'
+    'user'
 ]
 
 MIDDLEWARE = [
@@ -125,3 +125,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Global Variables
+DATE_INPUT_FORMATS = ['%Y-%m-%d']
+AUTH_USER_MODEL = 'user.User'
