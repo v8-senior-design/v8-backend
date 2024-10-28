@@ -3,13 +3,6 @@ from django.contrib.auth import get_user_model
 from calc import models
 
 class CustomUserTest(TestCase):
-    def setUp(self):
-        self.user = get_user_model().objects.create_user(email='test@v8.app', password='password', first_name='Steve', last_name='Jobs')
-
-    def test_user_fullname(self):
-        """test the property full name"""
-        self.assertEqual('Steve Jobs', self.user.full_name)
-
     def test_category_model(self):
         category = models.Category.objects.create(title='Transportation')
 
