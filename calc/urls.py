@@ -1,8 +1,13 @@
-from django.urls import path
-from user.views import test_view
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import EmissionViewSet, EmissionCategoryViewSet, EmissionFactorViewSet
+
+
+router = DefaultRouter()
+router.register(r'emission-categories', EmissionCategoryViewSet, basename='emission-category')
+router.register(r'emission-factors', EmissionFactorViewSet, basename='emission-factor')
+router.register(r'emissions', EmissionViewSet, basename='emission')
 
 urlpatterns = [
-    path('cf_get/', view=test_view, name='cf_get'),
-    path('cf_post/', view=test_view, name='cf_post'),
-    path('leaderboard_get/', view=test_view, name='leaderboard_get'),
+    path('', include(router.urls)),
 ]
