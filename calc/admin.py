@@ -1,6 +1,7 @@
 from django.contrib import admin
-from calc import models
+from .models import Emission, EmissionCategory, EmissionFactor
 
 
-admin.site.register(models.Category)
-admin.site.register(models.SubCategory)
+admin.site.register(EmissionCategory)
+admin.site.register(Emission)
+admin.site.register(EmissionFactor)
