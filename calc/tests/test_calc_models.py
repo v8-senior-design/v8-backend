@@ -25,12 +25,13 @@ class EmissionCategoryTest(TestCase):
         with self.assertRaises(Exception):
             EmissionCategory.objects.create(name="Fuel")
 
-class EmissionFactorest(TestCase):
+class EmissionFactorTest(TestCase):
     def setUp(self):
         self.category = EmissionCategory.objects.create(name="Transportation")
 
     def test_create_emission_factor(self):
-        factor = EmissionFactor.objects.create(
+        factor = EmissionFactor.objects.create
+        (
             category=self.category,
             name="Car",
             factor=0.21,
@@ -39,7 +40,7 @@ class EmissionFactorest(TestCase):
         self.assertEqual(factor.factor, 0.21)
         self.assertEqual(factor.unit, "mile")
 
-    def test_unique_together(self):
+    def test_unique_names(self):
         EmissionFactor.objects.create(category=self.category, name="Car", factor=0.21, unit="mile")
         with self.assertRaises(Exception):
             EmissionFactor.objects.create(category=self.category, name="Car", factor=0.25, unit="mile")
