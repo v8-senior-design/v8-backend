@@ -14,3 +14,13 @@ class CustomUserTest(TestCase):
 
         self.assertEqual('Transportation', sub_category.category.title)
         self.assertEqual('Car', sub_category.title)
+
+class EmissionCategoryTest(TestCase):
+    def test_emission_category(self):
+        category = EmissionCategory.objects.create(name="Fuel")
+        self.assertEqual(category.name, "Electricity")
+
+    def test_name(self):
+        EmissionCategory.objects.create(name="Fuel")
+        with self.assertRaises(Exception):
+            EmissionCategory.objects.create(name="Fuel")
