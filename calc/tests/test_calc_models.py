@@ -1,6 +1,8 @@
 from django.test import TestCase
 from django.contrib.auth import get_user_model
 from calc import models
+from calc.models import Category, SubCategory, EmissionCategory, EmissionFactor
+
 
 class CustomUserTest(TestCase):
     def test_category_model(self):
@@ -18,7 +20,7 @@ class CustomUserTest(TestCase):
 class EmissionCategoryTest(TestCase):
     def test_emission_category(self):
         category = EmissionCategory.objects.create(name="Fuel")
-        self.assertEqual(category.name, "Electricity")
+        self.assertEqual(category.name, "Fuel")
 
     def test_name(self):
         EmissionCategory.objects.create(name="Fuel")
