@@ -30,8 +30,7 @@ class EmissionFactorTest(TestCase):
         self.category = EmissionCategory.objects.create(name="Transportation")
 
     def test_create_emission_factor(self):
-        factor = EmissionFactor.objects.create
-        (
+        factor = EmissionFactor.objects.create(
             category=self.category,
             name="Car",
             factor=0.21,
