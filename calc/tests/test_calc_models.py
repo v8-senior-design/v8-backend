@@ -39,6 +39,7 @@ class EmissionFactorTest(TestCase):
         self.assertEqual(factor.factor, 0.21)
         self.assertEqual(factor.unit, "mile")
 
+
     def test_unique_names(self):
         EmissionFactor.objects.create(category=self.category, name="Car", factor=0.21, unit="mile")
         with self.assertRaises(Exception):
