@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework',
     'rest_framework.authtoken',
-    'corsheaders'
+    'corsheaders',
     # CUSTOM
     'calc',
     'user',
