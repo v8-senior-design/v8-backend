@@ -21,7 +21,6 @@ ALLOWED_HOSTS = [
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -33,12 +32,14 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders'
     # CUSTOM
     'calc',
     'user',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -104,6 +105,16 @@ REST_FRAMEWORK = {
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
+
+
+CORS_ORIGIN_WHITELIST = [
+    'http://127.0.0.1:8000',
+    'http://127.0.0.1:3000',
+    'v8-senior-2f6a65d2df2a.herokuapp.com',
+]
+
+CSRF_TRUSTED_ORIGINS = ['v8-senior-2f6a65d2df2a.herokuapp.com',]
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
