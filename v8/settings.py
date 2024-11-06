@@ -15,13 +15,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ['DEBUG']
 
-ALLOWED_HOSTS = [
-    'http://127.0.0.1:8000',
-    'http://127.0.0.1:3000',
-    'v8-senior-2f6a65d2df2a.herokuapp.com',
-    'https://v8-senior-2f6a65d2df2a.herokuapp.com',
-]
-
+ALLOWED_HOSTS = []
 
 # Application definition
 INSTALLED_APPS = [
@@ -35,17 +29,16 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework',
     'rest_framework.authtoken',
-    'corsheaders',
     # CUSTOM
     'calc',
     'user',
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
