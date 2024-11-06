@@ -107,9 +107,10 @@ CORS_ORIGIN_WHITELIST = [
     'http://127.0.0.1:8000',
     'http://127.0.0.1:3000',
     'https://v8-senior-2f6a65d2df2a.herokuapp.com',
+    'https://v8e.vercel.app/',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://v8-senior-2f6a65d2df2a.herokuapp.com',]
+CSRF_TRUSTED_ORIGINS = ['https://v8-senior-2f6a65d2df2a.herokuapp.com', 'https://v8e.vercel.app/',]
 
 
 # Password validation
