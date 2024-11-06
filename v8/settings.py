@@ -106,11 +106,10 @@ AUTHENTICATION_BACKENDS = [
 CORS_ORIGIN_WHITELIST = [
     'http://127.0.0.1:8000',
     'http://127.0.0.1:3000',
-    'v8-senior-2f6a65d2df2a.herokuapp.com',
     'https://v8-senior-2f6a65d2df2a.herokuapp.com',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['v8-senior-2f6a65d2df2a.herokuapp.com', 'https://v8-senior-2f6a65d2df2a.herokuapp.com',]
+CSRF_TRUSTED_ORIGINS = ['https://v8-senior-2f6a65d2df2a.herokuapp.com',]
 
 
 # Password validation
